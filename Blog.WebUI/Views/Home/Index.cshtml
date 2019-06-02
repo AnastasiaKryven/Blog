@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@model IEnumerable<Blog.Domain.Entities.Article>
+
+<body>
+    @foreach (var it in ViewBag.Articles)
+    {
+        <div class="sticker-right sticker-right align-text-top" data-sticker="@it.DateArticle">
+            <i style="font-size:x-large">@it.Name</i><br />@it.TextOfArticle
+        </div>
+        @Html.ActionLink("Edit", "EditArticle", "Home", new { ID = it.ArticleId }, new { @class = "navbar-brand" })
+
+    }
+
+    <div>
+        @Html.ActionLink("Добавить", "CreateArticle");
+    </div>
+
+
+</body>

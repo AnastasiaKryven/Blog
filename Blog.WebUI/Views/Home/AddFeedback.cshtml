@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "AddFeedback";
+}
+
+@model Blog.Domain.Entities.Request
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>New coment</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <h5 class="control-label col-md-5">Your Name</h5>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+        <div class="form-group">
+            <h5 class="control-label col-md-5">Your E-mail</h5>    <div class="col-md-10">
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+        <div class="form-group">
+            <h5 class="control-label col-md-5">Your Text</h5>    <div class="col-md-10">
+                @Html.EditorFor(model => model.TextOfRequest, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+        <button class="btn btn-success">
+            <div class="flex-fill">
+                Add Coment
+            </div>
+        </button>
+
+
+
+    </div>
+    <br />
+}
+<div class="btn btn-outline-primary">
+    <div>
+        @Html.ActionLink("Back to List", "About")
+    </div>
+</div>

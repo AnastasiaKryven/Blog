@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+    <nav class="navbar ">
+        <a class="navbar-brand" href="#">
+            <img src="~/Content/Paint_Windows_8_icon.png" width="30" height="30" class="d-inline-block align-top" />
+            <b class="mainname">Paint</b>
+        </a>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-9">
+                @RenderBody()
+            </div>
+            <div class="col-3">
+                <div class="col-xs-12 col-md-4">
+                    <ul class="nav">
+                        <li style="font-size:26px" class="menu_name"><br /> Меню</li>
+                        <li><a href="~/Home/Index" class="menu__item"><br />-Главная </a></li>
+                        <li><a href="~/Home/Contact" class="menu__item"><br />-Опрос </a></li>
+                        <li><a href="~/Home/About" class="menu__item"><br />-Отзывы </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="page-footer font-small teal pt-4">
+        2019 Copyright © Kriven Anastasia
+        <a href="#" title="Вернуться к началу" class="topbutton">^Наверх</a>
+    </footer>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

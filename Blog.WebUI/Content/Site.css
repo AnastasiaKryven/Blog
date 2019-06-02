@@ -1,0 +1,220 @@
+﻿.row > div {
+    background-color: #ff006e;
+    background-clip: content-box;
+    min-height: 100px;
+}
+
+.navbar {
+    background-color: #999;
+}
+
+.nav-pills > .container {
+    font-size: 26px;
+    width: 80%;
+    margin: 10px;
+}
+
+a{
+    color: antiquewhite;
+}
+
+.row {
+    border: 1px dotted lightyellow;
+    border-left: 0;
+    border-right: 0;
+}
+
+.mainname {
+    text-align: center;
+    color: white;
+    font-size: 36px;
+}
+
+[class*="sticker"] {
+    position: relative;
+    margin: 15px 0;
+    padding: 33px 15px 15px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, .64)
+}
+
+    [class*="sticker"]:after {
+        content: attr(data-sticker);
+        position: absolute;
+        top: 0;
+        padding: 3px 7px;
+        font-size: 12px;
+        font-weight: bold;
+        background: #999;
+        color: #fff
+    }
+
+.sticker-left {
+    border-top-left-radius: 6px
+}
+
+.sticker-right {
+    border-top-right-radius: 6px
+}
+
+h1 {
+    text-align: center;
+}
+
+.col > div {
+    background-color: aquamarine;
+}
+
+.sticker-left:after {
+    left: 0;
+    border-radius: 6px 0 6px 0
+}
+
+.sticker-right:after {
+    right: 0;
+    border-radius: 0 6px 0 6px
+}
+
+.sticker-danger:after {
+    background: #d9534f
+}
+
+.sticker-warning:after {
+    background: #f0ad4e
+}
+
+.sticker-success:after {
+    background: #5cb85c
+}
+
+.sticker-info:after {
+    background: #5bc0de
+}
+
+.sticker-inverse:after {
+    background: #222
+}
+
+div.scrollup {
+    position: fixed; /* фиксированная позиция */
+    color: #fff; /* цвет текста */
+    background-color: #286090; /* цвет заднего фона */
+    right: 20px; /* расстояние от правого края */
+    bottom: 0px; /* расстояние от нижнего края */
+    padding: 4px 10px; /* отступы до содержимого блока */
+    font-size: 20px; /* размер шрифта (иконки) */
+    border-top-left-radius: 4px; /* скругление верхнего левого угла */
+    border-top-right-radius: 4px; /* скругление верхнего правого угла */
+    cursor: pointer; /* форма курсора */
+    display: none; /* не отображать элемент */
+    text-align: center; /*выравнивание содержимого элемента по центру */
+}
+
+    div.scrollup:hover {
+        background-color: #000; /* цвет заднего фона при наведении */
+    }
+
+a {
+    color: beige;
+    font-size: 20px;
+}
+
+.topbutton {
+    width: 100px;
+    border: 2px solid #ccc;
+    background: #f7f7f7;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    cursor: pointer;
+    color: #333;
+    font-family: verdana;
+    font-size: 12px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+@media screen and (max-width:770px) {
+    .nav a {
+        font-size: 15px;
+    }
+}
+
+
+
+
+.form-width {
+    max-width: 25rem;
+}
+
+.has-float-label {
+    position: relative;
+}
+
+    .has-float-label label {
+        position: absolute;
+        left: 0;
+        top: 0;
+        cursor: text;
+        font-size: 75%;
+        opacity: 1;
+        -webkit-transition: all .2s;
+        transition: all .2s;
+        top: -.5em;
+        left: 0.75rem;
+        z-index: 3;
+        line-height: 1;
+        padding: 0 1px;
+    }
+
+        .has-float-label label::after {
+            content: " ";
+            display: block;
+            position: absolute;
+            background: white;
+            height: 2px;
+            top: 50%;
+            left: -.2em;
+            right: -.2em;
+            z-index: -1;
+        }
+
+    .has-float-label .form-control::-webkit-input-placeholder {
+        opacity: 1;
+        -webkit-transition: all .2s;
+        transition: all .2s;
+    }
+
+    .has-float-label .form-control:placeholder-shown:not(:focus)::-webkit-input-placeholder {
+        opacity: 0;
+    }
+
+    .has-float-label .form-control:placeholder-shown:not(:focus) + label {
+        font-size: 150%;
+        opacity: .5;
+        top: .3em;
+    }
+
+.input-group .has-float-label {
+    display: table-cell;
+}
+
+    .input-group .has-float-label .form-control {
+        border-radius: 0.25rem;
+    }
+
+    .input-group .has-float-label:not(:last-child) .form-control {
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    .input-group .has-float-label:not(:first-child) .form-control {
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+        margin-left: -1px;
+    }
+
